@@ -1,80 +1,70 @@
 @import "tailwindcss";
 
-.blink-text {
-  color: blue;
-  font-weight: bold;
-  animation: blinkAnimation 1s infinite;
+@theme {
+  --font-sans: "Outfit", sans-serif;
+  --color-brand-blue: #4f46e5;
+  --color-brand-cyan: #00f0ff;
+  --color-dark-bg: #0d0e12;
 }
 
-@keyframes blinkAnimation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* scrollbar styling */
-/* width */
+/* Custom scrollbar styling for modern dark theme */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
-/* track */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(26, 54, 93, 0.4); /* based on #1a365d */
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 999px;
 }
 
-/* thumb hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(26, 54, 93, 0.7);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
-.marquee {
-  display: inline-block;
-  padding-left: 100%;
-  animation: marqueeText 25s linear infinite;
-}
-/* marquee text */
-
-@keyframes marqueeText {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-/* Icon hover */
-@keyframes zoomShake {
-  0% {
-    transform: scale(1.1) translateX(0);
-  }
-  25% {
-    transform: scale(1.1) translateX(-4px);
+/* Visualizer Bars Animation */
+@keyframes bounce-bar {
+  0%, 100% {
+    transform: scaleY(0.3);
   }
   50% {
-    transform: scale(1.1) translateX(4px);
-  }
-  75% {
-    transform: scale(1.1) translateX(-4px);
-  }
-  100% {
-    transform: scale(1.1) translateX(0);
+    transform: scaleY(1);
   }
 }
 
-.group:hover .shake-img {
-  animation: zoomShake 0.4s ease;
+.animate-visualizer-1 {
+  animation: bounce-bar 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+.animate-visualizer-2 {
+  animation: bounce-bar 0.8s ease-in-out infinite;
+  transform-origin: bottom;
+  animation-delay: 0.15s;
+}
+.animate-visualizer-3 {
+  animation: bounce-bar 1.5s ease-in-out infinite;
+  transform-origin: bottom;
+  animation-delay: 0.3s;
+}
+.animate-visualizer-4 {
+  animation: bounce-bar 1.0s ease-in-out infinite;
+  transform-origin: bottom;
+  animation-delay: 0.45s;
+}
+.animate-visualizer-5 {
+  animation: bounce-bar 1.3s ease-in-out infinite;
+  transform-origin: bottom;
+  animation-delay: 0.6s;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(22, 25, 35, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
