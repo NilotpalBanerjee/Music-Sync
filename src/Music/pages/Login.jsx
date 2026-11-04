@@ -39,14 +39,14 @@ const MusicLogin = () => {
 
       <SignedOut>
         <div className="min-h-screen flex flex-col md:flex-row bg-[#08080c] text-white">
-          <div className="flex-1 flex flex-col justify-between p-8 md:p-16 bg-gradient-to-tr from-[#130321] via-[#090b16] to-[#0e163b] relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5">
+          <div className="flex-1 flex flex-col justify-between p-2 md:p-10 bg-gradient-to-tr from-[#130321] via-[#090b16] to-[#0e163b] relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5">
             <div className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] rounded-full bg-indigo-500/10 blur-[120px] pointer-events-none" />
             <div className="absolute bottom-[-20%] right-[-20%] w-[80%] h-[80%] rounded-full bg-purple-500/10 blur-[120px] pointer-events-none" />
 
             <div className="hidden md:block" />
 
-            <div className="flex flex-col items-center text-center max-w-lg mx-auto py-12 md:py-0">
-              <div className="relative group mb-8 flex flex-col items-center">
+            <div className="flex flex-col items-center text-center max-w-lg mx-auto py-10 md:py-0">
+              <div className="relative group mb-6 flex flex-col items-center">
                 <div className="absolute inset-0 bg-indigo-500/30 rounded-2xl blur-xl group-hover:bg-indigo-500/50 transition duration-500" />
                 <div className="relative bg-[#161828]/80 border border-white/10 p-4 rounded-2xl shadow-xl flex flex-col items-center w-28 h-28 justify-center">
                   <img
@@ -107,15 +107,14 @@ const MusicLogin = () => {
             <div className="absolute top-[20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-500/5 blur-[100px] pointer-events-none" />
 
             <div className="w-full max-w-md flex flex-col">
-              <div className="self-end mb-12 bg-[#13151f] p-1 rounded-xl border border-white/5 flex w-fit">
+              <div className="self-end mb-8 bg-[#13151f] p-1 rounded-xl border border-white/5 flex w-fit">
                 <button
                   type="button"
                   onClick={() => setAuthMode("login")}
-                  className={`px-5 py-2 rounded-lg text-xs font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 ${
-                    authMode === "login"
-                      ? "bg-[#4c63f6] text-white shadow-lg shadow-indigo-600/20"
-                      : "text-gray-400 hover:text-white"
-                  }`}
+                  className={`px-5 py-2 rounded-lg text-xs font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 ${authMode === "login"
+                    ? "bg-[#4c63f6] text-white shadow-lg shadow-indigo-600/20"
+                    : "text-gray-400 hover:text-white"
+                    }`}
                 >
                   <LoginOutlined />
                   Login
@@ -123,11 +122,10 @@ const MusicLogin = () => {
                 <button
                   type="button"
                   onClick={() => setAuthMode("signup")}
-                  className={`px-5 py-2 rounded-lg text-xs font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 ${
-                    authMode === "signup"
-                      ? "bg-[#4c63f6] text-white shadow-lg shadow-indigo-600/20"
-                      : "text-gray-400 hover:text-white"
-                  }`}
+                  className={`px-5 py-2 rounded-lg text-xs font-bold tracking-wider transition-all uppercase inline-flex items-center gap-2 ${authMode === "signup"
+                    ? "bg-[#4c63f6] text-white shadow-lg shadow-indigo-600/20"
+                    : "text-gray-400 hover:text-white"
+                    }`}
                 >
                   <UserAddOutlined />
                   Sign Up
