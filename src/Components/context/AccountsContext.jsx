@@ -1,7 +1,7 @@
 
 import { createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import useApi from "../../hook/UseApi";
+import useApi from "../../hook/useApi";
 
 export const AccountsContext = createContext();
 

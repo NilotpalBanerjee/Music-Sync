@@ -2,7 +2,7 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { storeEncrypted } from "../../utils/AuthToken";
-import useApi from "../../hook/UseApi";
+import useApi from "../../hook/useApi";
 
 export const AuthContext = createContext();
 
