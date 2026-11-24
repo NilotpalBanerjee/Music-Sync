@@ -14,7 +14,6 @@
     "@clerk/clerk-react": "^5.61.8",
     "@tailwindcss/vite": "^4.1.18",
     "antd": "^5.29.3",
-    "antd-style": "^4.1.0",
     "axios": "^1.13.4",
     "crypto-js": "^4.2.0",
     "react": "^19.2.0",
